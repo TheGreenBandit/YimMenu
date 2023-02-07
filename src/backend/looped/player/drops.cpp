@@ -5,7 +5,7 @@
 namespace big
 {
 
-	class beast_jump_looped : looped_command
+	class action_figure_drop_looped : looped_command
 	{
 		using looped_command::looped_command;
 
@@ -27,5 +27,5 @@ namespace big
 		}
 	};
 
-	beast_jump_looped g_adrop("adrop", "Action Figure Drop", "Allows You To Drop Action Figures On Someone", g.player.action_figure_drop);
+	action_figure_drop_looped g_afdrop("afdrop", "Action Figure Drop", "Allows You To Drop Action Figures On Someone", g.player.action_figure_drop);
 }
