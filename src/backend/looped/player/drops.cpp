@@ -1,6 +1,5 @@
 #include "natives.hpp"
 #include "backend/looped_command.hpp"
-#include "script.cpp"
 
 namespace big
 {
@@ -20,9 +19,7 @@ namespace big
 			STREAMING::REQUEST_MODEL(0x4D6514A3);
 			if (STREAMING::HAS_MODEL_LOADED(0x4D6514A3))
 			{
-				OBJECT::CREATE_AMBIENT_PICKUP(0x2C014CA6, c.x, c.y, c.z, NULL, 10, 0x4D6514A3, false, false); 
-				script::get_current()->yield(800ms);
-				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(0x4D6514A3);
+				OBJECT::CREATE_AMBIENT_PICKUP(0x2C014CA6, c.x, c.y, c.z, NULL, 10, 0x4D6514A3, false, false);
 			}
 		}
 	};
