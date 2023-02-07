@@ -8,8 +8,9 @@ namespace big
 	{
 		if (ImGui::TreeNode("RECOVERY"))
 		{
-			components::command_checkbox<"afdrop">();
-			components::command_checkbox<"moneygun">();
+
+			components::command_checkbox<"rpdrop">();
+
 			ImGui::TreePop();
 		}
 	}

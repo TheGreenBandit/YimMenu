@@ -14,16 +14,15 @@ namespace big
 
 			//0x4D6514A3/*vw_prop_vw_colle_alien*/, 0x748F3A2A/*vw_prop_vw_colle_beast*/, 0x1A9736DA/*vw_prop_vw_colle_imporage*/,0x3D1B7A2F/*vw_prop_vw_colle_pogo*/,
 			//0x1A126315/*vw_prop_vw_colle_prbubble*/, 0xD937A5E9/*vw_prop_vw_colle_rsrcomm*/, 0x23DDE6DB/*vw_prop_vw_colle_rsrgeneric*/, 0x991F8C36/*vw_prop_vw_colle_sasquatch*/
-			Player splayer = PLAYER::GET_PLAYER_PED_SCRIPT_INDEX(PLAYER::GET_PLAYER_PED_SCRIPT_INDEX(g_player_service->get_selected()->id()));
 			Vector3 c;
 			WEAPON::GET_PED_LAST_WEAPON_IMPACT_COORD(self::ped, &c);
 
 			STREAMING::REQUEST_MODEL(0x4D6514A3);
 			if (STREAMING::HAS_MODEL_LOADED(0x4D6514A3))
 			{																													//todo go in game and grab hash
-				if (PAD::IS_CONTROL_JUST_RELEASED(0, (int)ControllerInputs::INPUT_ATTACK) && WEAPON::IS_PED_WEAPON_READY_TO_SHOOT(self::ped))
+				if (PAD::IS_CONTROL_JUST_RELEASED(0, (int)ControllerInputs::INPUT_ATTACK) && WEAPON::IS_PED_WEAPON_READY_TO_SHOOT(self::ped)) //change to if(GET_WEAPON_DAMAGE_TYPE) != 1 || 0 || 2
 				{
-					OBJECT::CREATE_AMBIENT_PICKUP(0x2C014CA6, c.x, c.y, c.z + 10, NULL, 10, 0x4D6514A3, false, false);
+					OBJECT::CREATE_AMBIENT_PICKUP(1666779307, c.x, c.y, c.z + 10, NULL, 10, 0x4D6514A3, false, false);
 				}
 			}
 		}

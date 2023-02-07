@@ -115,6 +115,9 @@ namespace big
 
 		CustomWeapon selected = g.weapons.custom_weapon;
 
+		components::command_checkbox<"moneygun">(); //todo move to custom weapon enum
+
+
 		if (ImGui::BeginCombo("WEAPON"_T.data(), custom_weapons[(int)selected].name))
 		{
 			for (const custom_weapon& weapon : custom_weapons)

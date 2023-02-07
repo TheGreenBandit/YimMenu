@@ -4,7 +4,7 @@
 namespace big
 {
 
-	class action_figure_drop_looped : looped_command
+	class RP_drop_looped : looped_command
 	{
 		using looped_command::looped_command;
 
@@ -19,10 +19,10 @@ namespace big
 			STREAMING::REQUEST_MODEL(0x4D6514A3);
 			if (STREAMING::HAS_MODEL_LOADED(0x4D6514A3))
 			{
-				OBJECT::CREATE_AMBIENT_PICKUP(0x2C014CA6, c.x, c.y, c.z, NULL, 10, 0x4D6514A3, false, false);
+				OBJECT::CREATE_AMBIENT_PICKUP(0x2C014CA6, c.x, c.y, c.z, NULL, 10, 0x4D6514A3 || 0x748F3A2A, false, false);
 			}
 		}
 	};
 
-	action_figure_drop_looped g_afdrop("afdrop", "Action Figure Drop", "Allows You To Drop Action Figures On Someone", g.player.action_figure_drop);
+	RP_drop_looped g_rpdrop("rpdrop", "RP Drop", "Allows You To Drop Action Figures On Someone to give them RP.", g.player.rpdrop);
 }

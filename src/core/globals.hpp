@@ -194,7 +194,7 @@ namespace big
 			int character_slot = 1;
 			bool spectating = false;
 			//dont save
-			bool action_figure_drop = false;
+			bool rpdrop = false;
 
 			NLOHMANN_DEFINE_TYPE_INTRUSIVE(player, character_slot, spectating)
 		} player{};
