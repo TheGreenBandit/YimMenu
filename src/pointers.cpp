@@ -267,18 +267,6 @@ namespace big
 			m_friend_registry = ptr.add(2).rip().as<FriendRegistry*>();
 		});
 
-		// GET_SCREEN_COORDS_FROM_WORLD_COORDS
-		main_batch.add("GSCFWC", "E8 ? ? ? ? 84 C0 74 19 F3 0F 10 44 24", [this](memory::handle ptr)
-		{
-			m_get_screen_coords_for_world_coords = ptr.add(1).rip().as<functions::get_screen_coords_for_world_coords>();
-		});
-
-		// GET_GAMEPLAY_CAM_COORDS
-		main_batch.add("GGCC", "8B 90 ? ? ? ? 89 13", [this](memory::handle ptr)
-		{
-			m_get_gameplay_cam_coords = ptr.sub(0xE).as<functions::get_gameplay_cam_coords>();
-		});
-
 		// Give Pickup Reward
 		main_batch.add("GPR", "48 8B C8 33 C0 48 85 C9 74 0A 44 8B C3 8B D7 E8", [this](memory::handle ptr)
 		{

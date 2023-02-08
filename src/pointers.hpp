@@ -76,8 +76,6 @@ namespace big
 		ScInfo* m_sc_info;
 		FriendRegistry* m_friend_registry{};
 
-		functions::get_screen_coords_for_world_coords m_get_screen_coords_for_world_coords{};
-
 		HashTable<CBaseModelInfo*>* m_model_table;
 
 		PVOID m_gta_thread_start{};
@@ -85,8 +83,6 @@ namespace big
 
 		PVOID m_network_player_mgr_init;
 		PVOID m_network_player_mgr_shutdown;
-
-		functions::get_gameplay_cam_coords m_get_gameplay_cam_coords;
 
 		functions::give_pickup_rewards m_give_pickup_rewards{};
 

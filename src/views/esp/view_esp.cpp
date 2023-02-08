@@ -36,7 +36,7 @@ namespace big
 
 		uint32_t ped_damage_bits = plyr->get_ped()->m_damage_bits;
 
-		if (g_pointers->m_get_screen_coords_for_world_coords(player_pos.data, &screen_x, &screen_y))
+		if (GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(player_pos.x, player_pos.y, player_pos.z, &screen_x, &screen_y))
 		{
 			const auto esp_x = (float)*g_pointers->m_resolution_x * screen_x;
 			const auto esp_y = (float)*g_pointers->m_resolution_y * screen_y;

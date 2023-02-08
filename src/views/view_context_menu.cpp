@@ -40,7 +40,7 @@ namespace big
 				const auto context_target_distance = math::calculate_distance_from_game_cam(context_target_pos);
 				const auto context_target_multplr = context_target_distance > g.esp.global_render_distance[1] ? -1.f : 6.17757f / context_target_distance;
 
-				if (g_pointers->m_get_screen_coords_for_world_coords(context_target_pos.data, &context_screen_x, &context_screen_y))
+				if (GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(context_target_pos.x, context_target_pos.y, context_target_pos.z, &context_screen_x, &context_screen_y))
 				{
 					const auto cm = g_context_menu_service->get_context_menu();
 					if (cm == nullptr)
