@@ -19,8 +19,8 @@ namespace big
 
 			STREAMING::REQUEST_MODEL(0x4D6514A3);
 			if (STREAMING::HAS_MODEL_LOADED(0x4D6514A3))
-			{																													//todo go in game and grab hash
-				if (PAD::IS_CONTROL_JUST_RELEASED(0, (int)ControllerInputs::INPUT_ATTACK) && WEAPON::IS_PED_WEAPON_READY_TO_SHOOT(self::ped)) //change to if(GET_WEAPON_DAMAGE_TYPE) != 1 || 0 || 2
+			{
+				if (PAD::IS_CONTROL_JUST_RELEASED(0, (int)ControllerInputs::INPUT_ATTACK) && WEAPON::GET_WEAPON_DAMAGE_TYPE(g_local_player->m_weapon_manager->m_weapon_info->m_human_name_hash) != 1 || 0 || 2) //change to if(GET_WEAPON_DAMAGE_TYPE) != 1 || 0 || 2
 				{
 					OBJECT::CREATE_AMBIENT_PICKUP(1666779307, c.x, c.y, c.z + 10, NULL, 10, 0x4D6514A3, false, false);
 				}
