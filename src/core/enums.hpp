@@ -22,7 +22,8 @@ namespace big
 		GRAVITY_GUN,
 		STEAL_VEHICLE_GUN,
 		REPAIR_GUN,
-		VEHICLE_GUN
+		VEHICLE_GUN,
+		MONEY_GUN,
 	};
 	NLOHMANN_JSON_SERIALIZE_ENUM(CustomWeapon, {
 		{ CustomWeapon::NONE, "none" },
@@ -32,6 +33,7 @@ namespace big
 		{ CustomWeapon::STEAL_VEHICLE_GUN, "steal" },
 		{ CustomWeapon::REPAIR_GUN, "repair" },
 		{ CustomWeapon::VEHICLE_GUN, "vehicle" },
+		{ CustomWeapon::MONEY_GUN, "money" },
 	})
 
 	enum class ContextEntityType : uint8_t
