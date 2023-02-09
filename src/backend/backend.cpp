@@ -61,6 +61,7 @@ namespace big
 			looped::weapons_steal_vehicle_gun();
 			looped::weapons_vehicle_gun();
 			looped::weapons_clown_gun();
+			looped::weapons_money_gun();
 
 			script::get_current()->yield();
 		}

@@ -24,7 +24,7 @@ namespace big
 		REPAIR_GUN,
 		VEHICLE_GUN,
 		MONEY_GUN,
-		CLOWN_GUN,
+		CLOWN_GUN
 	};
 	NLOHMANN_JSON_SERIALIZE_ENUM(CustomWeapon, {
 		{ CustomWeapon::NONE, "none" },

@@ -603,7 +603,6 @@ namespace big
 				bool launch_on_release = false;
 				NLOHMANN_DEFINE_TYPE_INTRUSIVE(gravity_gun, launch_on_release)
 			} gravity_gun;
-			bool money_gun = false;
 			CustomWeapon custom_weapon = CustomWeapon::NONE;
 			bool force_crosshairs = false;
 			bool infinite_ammo = false;
