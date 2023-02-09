@@ -24,7 +24,7 @@ namespace big
 				{
 					if (PAD::IS_CONTROL_JUST_RELEASED(0, (int)ControllerInputs::INPUT_ATTACK) && WEAPON::GET_WEAPON_DAMAGE_TYPE(g_local_player->m_weapon_manager->m_weapon_info->m_human_name_hash) != 1 || 0 || 2) //change to if(GET_WEAPON_DAMAGE_TYPE) != 1 || 0 || 2
 					{
-						OBJECT::CREATE_AMBIENT_PICKUP(1666779307, c.x, c.y, c.z + 10, NULL, 10, 0x4D6514A3, false, false);
+						OBJECT::CREATE_AMBIENT_PICKUP(1666779307, c.x, c.y, c.z + 10, 0, 10, 0x4D6514A3, false, false);
 						script::get_current()->yield(200ms);
 					}
 				}
