@@ -59,7 +59,7 @@ namespace big
 			looped::weapons_repair_gun();
 			looped::weapons_steal_vehicle_gun();
 			looped::weapons_vehicle_gun();
-			looped::weapons_c4_limit();
+			looped::weapons_grappling_gun();
 
 			script::get_current()->yield();
 		}

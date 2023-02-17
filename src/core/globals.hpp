@@ -617,6 +617,7 @@ namespace big
 			bool increased_flare_limit = false;
 			bool rapid_fire = false;
 			bool interior_weapon = false;
+			bool grappling_gun = false;
 
 			NLOHMANN_DEFINE_TYPE_INTRUSIVE(weapons,
 				ammo_special, custom_weapon, force_crosshairs, infinite_ammo, infinite_mag, increased_damage, no_recoil,
