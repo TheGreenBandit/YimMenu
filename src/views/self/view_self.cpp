@@ -101,8 +101,10 @@ namespace big
 			}
 				
 		}
+		components::command_checkbox<"alpha">();
+		if(g.self.alpha)
+			ImGui::SliderInt("Alpha Value", &g.self.alphavalue, 0, 255, "%d");
 
-	
 		ImGui::Separator();
 
 		components::sub_title("PROOFS"_T);

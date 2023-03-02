@@ -1,5 +1,6 @@
 #include "hooking.hpp"
 #include <datanodes/player/CPlayerGamerDataNode.hpp>
+#include "services/players/player_service.hpp"
 
 namespace big
 {
@@ -28,6 +29,10 @@ namespace big
 
 		node->m_is_cheater = g.spoofing.spoof_cheater;
 
+		//if (g.protections.devdetect)
+		//{
+		//	g_player_service->iterate(g_player_service->get_self()++)
+		//}
 		// spoof r* dev and qa only when spoofing rid because every player in the session will send metrics if you join with that enabled
 		/*if (g.spoofing.spoof_rockstar_id)
 		{

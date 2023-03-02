@@ -286,6 +286,9 @@ namespace big
 			bool auto_tp = false;
 			bool super_jump = false;
 			bool beast_jump = false;
+			bool alpha = false;
+			int alphavalue = 0;
+			bool babayoga = false;
 
 			// do not save below entries
 			bool dance_mode = false;
