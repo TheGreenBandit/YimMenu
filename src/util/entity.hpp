@@ -141,4 +141,25 @@ namespace big::entity
 		}
 		return target_entities;
 	}
+
+	inline void push_entity_to_cam(int entity, int camdistance, int distance)
+	{
+		Vector3 Cam_coord    = local_player::get_coords_ahead_of_cam(camdistance);
+		Vector3 Entity_coord = ENTITY::GET_ENTITY_COORDS(enities, false);
+
+		if (MISC::GET_DISTANCE_BETWEEN_COORDS(Cam_coord.x,
+		        Cam_coord.y,
+		        Cam_coord.z,
+		        Entity_coord.x,
+		        Entity_coord.y,
+		        Entity_coord.z,
+		        true)
+		        < distance
+		    || SYSTEM::VDIST(Entity_coord.x, Entity_coord.y, Entity_coord.z, self::pos.x, self::pos.y, self::pos.z) < distance)
+		{
+			Vector3 Result       = Cam_coord - Entity_coord;
+			Vector3 veh_velocity = ENTITY::GET_ENTITY_VELOCITY(enities);
+			ENTITY::APPLY_FORCE_TO_ENTITY(enities, 1, Result.x * 9.f, Result.y * 9.f, Result.z * 9.f, 0.f, 0.f, 0.f, 0, false, true, true, 0, 0);
+		}
+	}
 }

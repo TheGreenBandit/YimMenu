@@ -27,6 +27,7 @@ namespace big
 		static void self_police();
 		static void self_hud();
 		static void self_dance_mode();
+		static void self_babayoga();
 
 		static void session_local_time();
 		static void session_pop_multiplier_areas();

@@ -10,6 +10,7 @@ namespace big
 {
 	void view::self()
 	{
+		ImGui::Checkbox("baba", &g.self.babayoga);
 		components::command_button<"suicide">();
 		ImGui::SameLine();
 		components::command_button<"heal">();

@@ -280,7 +280,7 @@ namespace big
 			bool super_jump                            = false;
 			bool beast_jump                            = false;
 			bool superman                              = false;
-
+			bool babayoga                              = false;
 			// do not save below entries
 			bool dance_mode = false;
 
