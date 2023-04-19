@@ -19,6 +19,17 @@ namespace big
 
 			ImGui::Separator();
 
+			if (auto v = g_local_player->m_vehicle; v)
+				ImGui::Text(std::format("Flag1: {} Flag2: {} Flag3: {}\n Flag4: {} Model Flag: {} handling flag:{} other flag: {}",
+				    v->m_flags,
+				    v->m_flags_2,
+				    v->m_flags_3,
+				    v->m_flags_4,
+				    v->m_handling_data->m_model_flags,
+					v->m_handling_data->m_handling_flags,
+				    v->m_model_info->m_flags)
+				                .c_str());
+
 			if (g.window.ingame_overlay.show_fps)
 				ImGui::Text("%.0f FPS", ImGui::GetIO().Framerate / 2);
 

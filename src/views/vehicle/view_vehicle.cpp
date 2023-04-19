@@ -22,7 +22,7 @@ namespace big
 
 		ImGui::SameLine();
 		components::command_checkbox<"keepfixed">();
-
+		components::command_checkbox<"deluxomode">();
 		ImGui::Separator();
 
 		components::button("TP_IN_PV"_T, [] {

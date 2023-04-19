@@ -598,6 +598,7 @@ namespace big
 
 			SpeedUnit speed_unit = SpeedUnit::MIPH;
 
+			bool deluxo_mode     = false;
 			bool god_mode        = false;
 			bool proof_bullet    = false;
 			bool proof_fire      = false;
