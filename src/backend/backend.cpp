@@ -75,6 +75,7 @@ namespace big
 		while (g_running)
 		{
 			looped::vehicle_auto_drive();
+			looped::vehicle_ability();
 			looped::vehicle_boost_behavior();
 			looped::vehicle_god_mode();
 			looped::derail_train();

@@ -632,6 +632,7 @@ namespace big
 			bool keep_on_ground                         = false;
 			bool no_collision                           = false;
 			bool unlimited_weapons                      = false;
+			VehicleAbility ability_chosen           = VehicleAbility::NONE;
 
 			NLOHMANN_DEFINE_TYPE_INTRUSIVE(vehicle, speedo_meter, fly, rainbow_paint, speed_unit, god_mode, proof_bullet, proof_fire, proof_collision, proof_melee, proof_explosion, proof_steam, proof_water, proof_mask, auto_drive_destination, auto_drive_style, auto_drive_speed, auto_turn_signals, boost_behavior, drive_on_water, horn_boost, instant_brake, block_homing, seatbelt, turn_signals, vehicle_jump, keep_vehicle_repaired, no_water_collision, disable_engine_auto_start, change_engine_state_immediately, vehinvisibility, localveh_visibility, localped_visibility, keep_on_ground, no_collision, unlimited_weapons)
 		} vehicle{};
@@ -712,13 +713,12 @@ namespace big
 			struct ingame_overlay
 			{
 				bool opened                = true;
-				bool show_with_menu_opened = false;
-
 				bool show_fps              = true;
-				bool show_players          = true;
 				bool show_time             = true;
-				bool show_replay_interface = true;
+				bool show_players          = true;
 				bool show_game_versions    = true;
+				bool show_with_menu_opened = false;
+				bool show_replay_interface = true;
 
 				NLOHMANN_DEFINE_TYPE_INTRUSIVE(ingame_overlay, opened, show_with_menu_opened, show_fps, show_players, show_time, show_replay_interface, show_game_versions)
 			} ingame_overlay{};

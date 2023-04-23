@@ -164,6 +164,27 @@ namespace big
 		}
 		ImGui::Separator();
 
+		const char* ability_names[12] = {"No Ability", "Rocket Boost", "Vehicle Jump", "Vehicle Parachute", "Ramp Buggy", "Drift + Jump", "Boost + Parachute", "Jump + Parachute", "Boost + Jump", "Boost + Jump + Parachute", "Boost + Parachute + Rampbuggy", "Boost + Jump + Parachute + Rampbuggy"};
+		if (ImGui::BeginCombo("Ability Selector", ability_names[(int)g.vehicle.ability_chosen]))
+		{
+			for (int i = 0; i < 11; i++)
+			{
+				if (ImGui::Selectable(ability_names[i], g.vehicle.ability_chosen == (VehicleAbility)i))
+				{
+					g.vehicle.ability_chosen = (VehicleAbility)i;
+					g_notification_service->push_warning("Ability Selector", std::vformat("Ability Set To {}.", std::make_format_args(ability_names[i])));
+				}
+
+				if (g.vehicle.ability_chosen == (VehicleAbility)i)
+				{
+					ImGui::SetItemDefaultFocus();
+				}
+			}
+
+			ImGui::EndCombo();
+		}
+		ImGui::Separator();
+
 		components::sub_title("SPEEDO_METER"_T);
 		{
 			components::command_checkbox<"speedometer">();
