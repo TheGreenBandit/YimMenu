@@ -13,6 +13,7 @@ namespace big
 		MOBILE,
 		OUTFIT_EDITOR,
 		OUTFIT_SLOTS,
+		VISION,
 
 		VEHICLE,
 		HANDLING,
@@ -81,6 +82,7 @@ namespace big
 		                {tabs::TELEPORT, {"GUI_TAB_TELEPORT", view::teleport}},
 		                {tabs::OUTFIT_EDITOR, {"GUI_TAB_OUTFIT_EDITOR", view::outfit_editor}},
 		                {tabs::OUTFIT_SLOTS, {"GUI_TAB_OUTFIT_SLOTS", view::outfit_slots}},
+		                {tabs::VISION, {"GUI_TAB_VISION", view::vision}},
 		            },
 		        },
 		    },

@@ -352,10 +352,10 @@ namespace big
 					//dont save
 					int heatscale_index = 0;
 
-					NLOHMANN_DEFINE_TYPE_INTRUSIVE(heat, heat_vision, hv_advanced_override)
+					NLOHMANN_DEFINE_TYPE_INTRUSIVE(heat, heat_vision, heat_vision_advanced_override, fadestart, fadeend, maxthick, noisemin, noisemax, highlight_intensity, highlight_noise, heatscale, color_near_r, color_near_g, color_near_b)
 				} heat{};
 
-				NLOHMANN_DEFINE_TYPE_INTRUSIVE(vision, night_vision, nv_override, nv_lightrange, timecycleentry, timecycle_override, heat)
+				NLOHMANN_DEFINE_TYPE_INTRUSIVE(vision, heat, night_vision, nv_override, nv_lightrange, timecyclestrength, timecycle_override)
 			} vision{};
 			// do not save below entries
 			bool dance_mode = false;

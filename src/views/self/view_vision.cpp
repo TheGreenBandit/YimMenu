@@ -29,6 +29,7 @@ namespace big
 		}
 
 
+
 		components::sub_title("TIMECYCLETITLE");
 
 		ImGui::Separator();
