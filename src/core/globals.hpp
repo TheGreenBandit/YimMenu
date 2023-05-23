@@ -334,7 +334,7 @@ namespace big
 
 				const char* timecycleentry = "";
 				bool timecycle_override    = false;
-
+				float timecyclestrength    = 1.f;
 				struct heat
 				{
 					bool heat_vision = false;

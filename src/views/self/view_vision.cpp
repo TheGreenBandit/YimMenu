@@ -1,6 +1,4 @@
 #include "fiber_pool.hpp"
-#include "services/mobile/mobile_service.hpp"
-#include "util/mobile.hpp"
 #include "views/view.hpp"
 
 namespace big
@@ -22,13 +20,21 @@ namespace big
 		ImGui::Separator();
 
 		components::command_checkbox<"heatvis">();
-		components::command_checkbox<"heatvisadv">();
+		if (components::command_checkbox<"heatvisadv">())
+		{		
+			if (ImGui::Button("Reset Options"))
+			{
+				//todo, just use GRAPHICS::RESET_SEETHROUGH, could rpob just turn off and on as i set it to reset on turnoff.
+			}
+		}
 
 
 		components::sub_title("TIMECYCLETITLE");
 
 		ImGui::Separator();
 
-
+		components::command_checkbox<"timecycle">();
+		//ImGui::InputText("Timecycle Modifier", (char*)&g.self.vision.timecycleentry, sizeof(g.self.vision.timecycleentry)); look into this
+		ImGui::InputFloat("Modifier Strength", &g.self.vision.timecyclestrength, 1.f, 10.f);
 	}
 }

@@ -10,6 +10,7 @@ namespace big
 		virtual void on_tick() override
 		{
 			GRAPHICS::SET_TIMECYCLE_MODIFIER(g.self.vision.timecycleentry);
+			GRAPHICS::SET_TIMECYCLE_MODIFIER_STRENGTH(g.self.vision.timecyclestrength);
 		}
 
 		virtual void on_disable() override
