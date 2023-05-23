@@ -3,7 +3,6 @@
 
 namespace big
 {
-
 	class time_cycle_looped : looped_command
 	{
 		using looped_command::looped_command;
@@ -19,5 +18,6 @@ namespace big
 		}
 	};
 
-	time_cycle_looped g_time_cycle_looped("timecycle", "Heat Vision", "Provides the heatvision effect.", g.self.vision.heat_vision);
+	time_cycle_looped 
+		g_time_cycle_looped("timecycle", "Override Timecycle", "Override the timecycle to one you want.", g.self.vision.timecycle_override);
 }

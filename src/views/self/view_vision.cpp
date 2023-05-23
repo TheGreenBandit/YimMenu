@@ -22,7 +22,7 @@ namespace big
 		ImGui::Separator();
 
 		components::command_checkbox<"heatvis">();
-
+		components::command_checkbox<"heatvisadv">();
 
 
 		components::sub_title("TIMECYCLETITLE");

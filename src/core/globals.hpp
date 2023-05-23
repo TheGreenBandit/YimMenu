@@ -332,17 +332,35 @@ namespace big
 				bool nv_override  = false;
 				float nv_lightrange = 1.f;
 
-				bool heat_vision  = false;
-
 				const char* timecycleentry = "";
+				bool timecycle_override    = false;
 
+				struct heat
+				{
+					bool heat_vision = false;
+					bool heat_vision_advanced_override = false;
+					float fadestart           = 1.f;
+					float fadeend             = 1.f;
+					float maxthick            = 1.f;
+					float noisemin            = 1.f;
+					float noisemax            = 1.f;
+					float highlight_intensity = 1.f;
+					float highlight_noise     = 1.f;
+					float heatscale           = 1.f;
+					int color_near_r = 1, color_near_g = 1, color_near_b = 1;
 
-				NLOHMANN_DEFINE_TYPE_INTRUSIVE(vision, night_vision)
+					//dont save
+					int heatscale_index = 0;
+
+					NLOHMANN_DEFINE_TYPE_INTRUSIVE(heat, heat_vision, hv_advanced_override)
+				} heat{};
+
+				NLOHMANN_DEFINE_TYPE_INTRUSIVE(vision, night_vision, nv_override, nv_lightrange, timecycleentry, timecycle_override, heat)
 			} vision{};
 			// do not save below entries
 			bool dance_mode = false;
 
-			NLOHMANN_DEFINE_TYPE_INTRUSIVE(self, ipls, ptfx_effects, clean_player, force_wanted_level, free_cam, invisibility, local_visibility, never_wanted, no_ragdoll, noclip, off_radar, super_run, no_collision, unlimited_oxygen, no_water_collision, wanted_level, god_mode, part_water, proof_bullet, proof_fire, proof_collision, proof_melee, proof_explosion, proof_steam, proof_drown, proof_water, proof_mask, mobile_radio, fast_respawn, auto_tp, super_jump, beast_jump, healthregen, healthregenrate, hud, superman, custom_weapon_stop)
+			NLOHMANN_DEFINE_TYPE_INTRUSIVE(self, ipls, ptfx_effects, clean_player, force_wanted_level, free_cam, invisibility, local_visibility, never_wanted, no_ragdoll, noclip, off_radar, super_run, no_collision, unlimited_oxygen, no_water_collision, wanted_level, god_mode, part_water, proof_bullet, proof_fire, proof_collision, proof_melee, proof_explosion, proof_steam, proof_drown, proof_water, proof_mask, mobile_radio, fast_respawn, auto_tp, super_jump, beast_jump, healthregen, healthregenrate, hud, superman, custom_weapon_stop, vision)
 		} self{};
 
 		struct session
