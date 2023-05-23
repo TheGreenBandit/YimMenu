@@ -325,6 +325,20 @@ namespace big
 
 				NLOHMANN_DEFINE_TYPE_INTRUSIVE(hud, color_override, color_override_initialized, hud_color_overrides, hide_radar, hide_ammo, selected_hud_component, hud_components_states, force_show_hud_element, force_show_hud)
 			} hud{};
+
+			struct vision
+			{
+				bool night_vision = false;
+				bool nv_override  = false;
+				float nv_lightrange = 1.f;
+
+				bool heat_vision  = false;
+
+				const char* timecycleentry = "";
+
+
+				NLOHMANN_DEFINE_TYPE_INTRUSIVE(vision, night_vision)
+			} vision{};
 			// do not save below entries
 			bool dance_mode = false;
 
