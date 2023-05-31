@@ -1,5 +1,6 @@
 #include "backend/looped_command.hpp"
 #include "natives.hpp"
+#include "backend/int_command.hpp"
 
 namespace big
 {
@@ -29,6 +30,8 @@ namespace big
 
 	night_vision_looped g_night_vision_looped("nightvis", "Night Vision", "Provides the nightvision effect.",
 	    g.self.vision.night_vision);
-	bool_command g_override_nightvis("overridenv", "Override Light Range", "Allows you to set the light in the nightvision to a custom amount.",
+	bool_command g_override_nightvis("nightvisov", "Override Light Range", "Allows you to set the light in the nightvision to a custom amount.",
 	    g.self.vision.nv_override);
+//	int_command
+//	    g_override_nv_value("nightvislight", "Light Value", "Set the light to a desired amount.", g.self.vision.nv_lightrange, 0, 100);
 }
