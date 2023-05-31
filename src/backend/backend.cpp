@@ -64,6 +64,7 @@ namespace big
 			looped::weapons_steal_vehicle_gun();
 			looped::weapons_vehicle_gun();
 			looped::weapons_c4_limit();
+			looped::weapons_blackhole_gun();
 
 			script::get_current()->yield();
 		}
