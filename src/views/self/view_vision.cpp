@@ -22,7 +22,7 @@ namespace big
 
 		components::command_checkbox<"heatvis">();
 		components::command_checkbox<"heatvisadv">();
-		if (g.self.vision.heat.heat_vision_advanced_override)
+		if (components::nav_button("Reset Heat Vision"))
 		{
 			g_fiber_pool->queue_job([] {
 				GRAPHICS::SEETHROUGH_RESET();
